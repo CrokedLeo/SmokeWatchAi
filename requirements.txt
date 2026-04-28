@@ -1,0 +1,16 @@
+# Server & API
+fastapi
+uvicorn
+python-multipart
+requests
+python-dotenv
+
+# Computer Vision & AI
+ultralytics
+opencv-python
+numpy
+Pillow
+
+# Data Analysis (per calcoli Ringelmann e statistiche)
+pandas
+matplotlib

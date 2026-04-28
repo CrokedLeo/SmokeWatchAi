@@ -1,0 +1,13 @@
+# Path principale del progetto (relativo alla posizione di esecuzione)
+path: ../data/Fire and Smoke Dataset 
+
+# Percorsi relativi alla cartella 'path' definita sopra
+train: train/images
+val: valid/images
+test: test/images
+
+# Classi
+nc: 2
+names:
+  0: fire
+  1: smoke

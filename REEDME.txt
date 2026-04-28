@@ -1,0 +1,42 @@
+smokewatch/
+├── core/                   <-- La logica principale
+│   ├── app.py              <-- Il server FastAPI
+│   └── main.py             
+├── vision/                 <-- Logica IA e Ringelmann
+│   └── smoke_analysis.py   
+├── service/                <-- API esterne (Meteo/GPS)
+│   └── environmental_services.py
+├── models/                 <-- Solo i pesi definitivi
+│   ├── best.pt             <-- Rinomina qui il file da train-7/weights
+│   └── yolov8n.pt          
+├── scripts/                <-- Tutto ciò che serve per allenare o testare
+│   ├── train_smokewatch.py
+│   ├── test_batch_api.py
+│   ├── test_massivo.py
+│   └── test_model.py
+├── data/                   <-- Dataset e file di config
+│   ├── data.yaml
+│   └── Fire and Smoke Dataset/
+├── .gitignore              <-- Per non caricare spazzatura
+├── requirements.txt        <-- Elenco librerie
+└── README.md               <-- Documentazione
+
+
+# SmokeWatch AI
+
+Sistema intelligente per il rilevamento e la classificazione dell'opacità del fumo (Scala Ringelmann) emesso da navi e impianti industriali.
+
+## Caratteristiche
+- **Rilevamento**: YOLOv8 (Trainato su fumo e fuoco).
+- **Analisi**: Calcolo dinamico Ringelmann 0-5 basato su luminanza ambientale.
+- **Validazione**: Integrazione API OpenWeather (AQI) e Geocoding (Nominatim).
+
+## Setup
+1. Installa le dipendenze: `pip install -r requirements.txt`
+2. Avvia il server: `python core/app.py`
+3. Esegui un test batch: `python scripts/test_batch_api.py`
+
+## Struttura
+- `core/`: API Backend con FastAPI.
+- `vision/`: Algoritmi di elaborazione immagini.
+- `models/`: Pesi del modello YOLO.
