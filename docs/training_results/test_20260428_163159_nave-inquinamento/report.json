@@ -1,0 +1,24 @@
+{
+    "status": "success",
+    "timestamp": "20260428_163159",
+    "polluter": {
+        "type": "ZONA INDUSTRIALE/FABBRICA",
+        "address": "Pista ciclabile Napoli, Mergellina, Chiaia, Municipalit\u00e0 1, Napoli, Campania, 80121, Italia"
+    },
+    "environment": {
+        "aqi": 3,
+        "no2": 0.29,
+        "so2": 0.58
+    },
+    "summary": {
+        "max_ringelmann": 1.0,
+        "severity": "OK"
+    },
+    "details": [
+        {
+            "class": "smoke",
+            "ringelmann": 1.0,
+            "conf": 0.56
+        }
+    ]
+}
